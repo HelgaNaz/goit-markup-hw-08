@@ -1,0 +1,36 @@
+.clients__title {
+  @include sectionTitle;
+  margin-bottom: 50px;
+}
+.clients__list {
+  @include centeredFlex;
+}
+.clients__picture:not(:last-child) {
+  margin-right: 30px;
+}
+.clients__link {
+  @include centeredFlex;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid getColor("iconColor");
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor("accent");
+    outline: none;
+  }
+
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+    fill: getColor("accent");
+  }
+}
+
+.clients__icon {
+  fill: getColor("iconColor");
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

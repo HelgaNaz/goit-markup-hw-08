@@ -1,0 +1,75 @@
+.team {
+  background-color: getColor("secondaryBgc");
+}
+.team__title {
+  @include sectionTitle;
+  margin-bottom: 50px;
+}
+.team__list {
+  display: flex;
+}
+.team__card {
+  background-color: getColor("primaryBgc");
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.team__text {
+  @include centeredFlex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: getColor("titleText");
+  margin-bottom: 10px;
+}
+.team__position {
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.networks {
+  @include centeredFlex;
+  padding-top: 16px;
+  padding-bottom: 30px;
+}
+.networks__list {
+  display: flex;
+}
+
+.networks__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.networks__link {
+  @include centeredFlex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: getColor ("primaryBgc");
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent");
+  }
+
+  &:hover .networks__icon,
+  &:focus .networks__icon {
+    fill: getColor("iconHover");
+  }
+}
+
+.networks__icon {
+  fill: getColor("iconColor");
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

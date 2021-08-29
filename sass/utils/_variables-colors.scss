@@ -1,0 +1,28 @@
+$colors: (
+  "accent": #2196f3,
+  //Цвет-акцент: лого, кнопки, иконки, оверлей
+  "titleText": #212121,
+  //Заголовки, меню навигации
+  "primaryText": #757575,
+  //Основной цвет текста
+  "secondaryText": #ffffff,
+  //Название сайта, текст футера, кнопки, оверлей
+  "additionalText": #000000,
+  //Лого, иконки в модальном окне
+  "iconColor": #afb1b8,
+  //Иконки
+  "iconHover": #ffffff,
+  "primaryBgc": #ffffff,
+  //Основной фон
+  "secondaryBgc": #f5f4fa,
+  //Фон на команде, подложка под иконки в разделе skills
+  "heroBgc": #c4c4c4,
+  //Подложка под герой
+  "footerBgc": #2f303a,
+  //Фон футера
+  "buttonHoverColor": #188ce8,
+  //Ховер кнопки
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

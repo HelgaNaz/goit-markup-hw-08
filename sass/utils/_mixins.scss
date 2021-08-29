@@ -1,0 +1,12 @@
+@mixin centeredFlex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin sectionTitle() {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: getColor("titleText");
+}
