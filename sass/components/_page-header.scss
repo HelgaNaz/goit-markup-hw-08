@@ -2,8 +2,15 @@
   border-bottom: 1px solid #ececec;
 }
 .page-header__menu {
+  min-height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 767px) {
+    display: flex;
+    align-items: center;
+  }
 }
 .page-header__nav {
   display: flex;
@@ -90,52 +97,109 @@
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-// Кнопка
+// Кнопка-переключатель
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 
-  // margin: 0;
-  // padding: 0;
-  // background-color: transparent;
-  // cursor: pointer;
-  // border: none;
-  // border-radius: 50%;
-  // outline: none;
+  @include centeredFlex;
 
-  @media (min-width: 768px) {
+  background-color: transparent;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover .icon-toggle,
+  &:focus .icon-toggle {
+    fill: getColor("accent");
+  }
+  @include respond-to(tablet) {
     display: none;
   }
 }
+// Вынести в отдельный файл мобил-меню
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: getColor("accent");
-}
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 48px 40px 48px 40px;
   background-color: getColor("primaryBgc");
+  outline: 5px solid green;
   z-index: 999;
 
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+  @include respond-to(tablet) {
+    display: none;
+  }
 }
 
-.menu-container.is-open {
-  transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
+.menu-toggle__close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
+  top: 10px;
+  right: 15px;
+  &:hover .icon-toggle,
+  &:focus .icon-toggle {
+    fill: getColor("accent");
+  }
+}
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  color: getColor(titleText);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+  }
+  &--current {
+    color: getColor("accent");
+  }
+}
+
+.mobile-menu__navigation {
+  margin-bottom: 302px;
+}
+.mobile-menu__contacts {
+  margin-bottom: 64px;
+}
+.mobile-menu__social {
+  display: inline-flex;
+}
+.mobile-menu__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  color: getColor("accent");
+}
+.mobile-menu__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: getColor("primaryText");
+}
+.mobile-menu__network {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: getColor("accent");
+}
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
 }

@@ -7,6 +7,16 @@
   padding-right: 15px;
 }
 
+@media (min-width: 480px) {
+  .container {
+    max-width: 767px;
+  }
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 body {
   background-color: getColor("primaryBgc");
   color: getColor("primaryText");
