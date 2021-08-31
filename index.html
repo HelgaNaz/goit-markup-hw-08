@@ -231,11 +231,11 @@
                         <li class="team__card">
                             
                                 <img 
-                                src="./images/teamcard1.jpg" 
+                                src="./images/teamcard1-450@1x.jpg " 
+                                srcset="./images/teamcard1-450@1x.jpg 1x,
+                                ./images/teamcard1-450@2x.jpg 2x"
                                 alt="Фото Игорь Демьяненко"
-                                 srcset="./images/teamcard1@1x.jpg 1x,
-                                ./images/teamcard1@2x.jpg 2x" 
-                                width="270" height="260">
+                                 >
                                 <div class="team__text">
                                     <h4 class="team__name">Игорь Демьяненко</h4>
                                     <p class="team__position">Product Designer</p>  
@@ -274,9 +274,11 @@
                                 </div>                 
                         </li>
                         <li class="team__card">               
-                                <img src="./images/teamcard2.jpg" 
+                                <img src="./images/teamcard2-450@1x.jpg " 
+                                srcset="./images/teamcard2-450@1x.jpg 1x,
+                                ./images/teamcard2-450@2x.jpg 2x"
                                 alt="Фото Ольга Репина" 
-                                width="270" height="260">
+                                >
                                 <div class="team__text">
                                     <h4 class="team__name">Ольга Репина</h4>
                                     <p class="team__position">Frontend Developer</p>
@@ -315,9 +317,11 @@
                                 </div>
                         </li>
                         <li class="team__card">                 
-                                <img src="./images/teamcard3.jpg" 
+                                <img src="./images/teamcard3-450@1x.jpg " 
+                                srcset="./images/teamcard3-450@1x.jpg 1x,
+                                ./images/teamcard3-450@2x.jpg 2x" 
                                 alt="Фото Николай Тарасов" 
-                                width="270" height="260">
+                                >
                                 <div class="team__text">
                                     <h4 class="team__name">Николай Тарасов</h4>
                                     <p class="team__position">Marketing</p>  
@@ -356,9 +360,11 @@
                                 </div>             
                         </li>
                         <li class="team__card">                   
-                                <img src="./images/teamcard4.jpg" 
+                                <img src="./images/teamcard4-450@1x.jpg " 
+                                srcset="./images/teamcard4-450@1x.jpg 1x,
+                                ./images/teamcard4-450@2x.jpg 2x" 
                                 alt="Фото Михаил Ермаков" 
-                                width="270" height="260">
+                                >
                                 <div class="team__text">
                                     <h4 class="team__name">Михаил Ермаков</h4>
                                     <p class="team__position">UI Designer</p>  
@@ -452,8 +458,9 @@
     </main>
     <footer class="page-footer">
         <div class="container page-footer__container">
+            <div class="page-footer__tablet">
             <div class="page-footer__contacts">
-                <a href="./index.html" class="logo">Web<span class="logo logo--white">Studio</span></a>
+                <a href="./index.html" class="logo page-footer__logo">Web<span class="logo logo--white">Studio</span></a>
                 <address class="page-footer__address"> г. Киев, пр-т Леси Украинки, 26</address>
                 <a href="mailto:info@example.com" class="page-footer__link">info@example.com</a>
                 <a href="tel:+380991111111" class="page-footer__link">+38 099 111 11 11</a>
@@ -492,7 +499,7 @@
                         </li>  
                     </ul>
                 </div>
-            
+            </div>
             <form class="footer-form">
                 <label class="footer-form__label" for="mail">Подпишитесь на рассылку</label>
                 <div class="footer-form__field">

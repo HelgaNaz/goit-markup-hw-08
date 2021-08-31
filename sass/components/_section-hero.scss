@@ -1,6 +1,6 @@
 .hero {
-  width: 480px;
-  height: 400px;
+  min-width: 480px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0px;
@@ -13,7 +13,25 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px 400px;
+  background-size: cover;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 118px 0px;
+    background-color: getColor("heroBgc");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/header-480@1x.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 480px 400px;
+  }
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
