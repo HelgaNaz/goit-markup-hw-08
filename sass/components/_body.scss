@@ -1,22 +1,22 @@
 .container {
   outline: 2px solid red;
-  min-width: 320px;
-  max-width: 1200px;
+  // min-width: 320px;
+  // max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
-@media (min-width: 480px) {
-  .container {
-    max-width: 767px;
-  }
-}
-@media (min-width: 767px) {
-  .container {
-    max-width: 1200px;
-  }
-}
 body {
   background-color: getColor("primaryBgc");
   color: getColor("primaryText");
@@ -29,6 +29,11 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

@@ -135,7 +135,7 @@
   &.is-open {
     transform: translateX(0);
   }
-  @include respond-to(tablet) {
+  @media (min-width: 481px) {
     display: none;
   }
 }
