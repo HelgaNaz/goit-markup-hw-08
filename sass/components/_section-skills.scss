@@ -11,9 +11,9 @@
 }
 
 .skills__box {
-  outline: 3px solid rgb(20, 154, 207);
+  // outline: 3px solid rgb(20, 154, 207);
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     width: 450px;
     &:not(:last-child) {
       margin-bottom: 30px;

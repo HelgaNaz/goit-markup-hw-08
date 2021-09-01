@@ -139,7 +139,7 @@
   height: 100vh;
   padding: 48px 40px 48px 40px;
   background-color: getColor("primaryBgc");
-  outline: 5px solid green;
+
   z-index: 999;
 
   transform: translateX(100%);
@@ -205,18 +205,17 @@
   color: getColor("primaryText");
 }
 .mobile-menu__network {
-  // margin-right: 20px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 
   color: getColor("accent");
-
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
+
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
