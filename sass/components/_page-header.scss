@@ -162,6 +162,13 @@
     fill: getColor("accent");
   }
 }
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  justify-content: space-between;
+}
 .mobile-menu__link {
   font-weight: 500;
   font-size: 40px;
@@ -179,12 +186,12 @@
   }
 }
 
-.mobile-menu__navigation {
-  margin-bottom: 302px;
-}
-.mobile-menu__contacts {
-  margin-bottom: 64px;
-}
+// .mobile-menu__navigation {
+//   margin-bottom: 302px;
+// }
+// .mobile-menu__contacts {
+//   margin-bottom: 64px;
+// }
 .mobile-menu__social {
   display: inline-flex;
 }
