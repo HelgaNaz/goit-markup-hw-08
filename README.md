@@ -1,5 +1,5 @@
 # goit-markup-hw-08
 
-WebStudio Adapptive
+WebStudio Adaptive
 
-Учебный проект GoIt
+Учебный проект GoIT
